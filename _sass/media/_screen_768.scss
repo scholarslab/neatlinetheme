@@ -1,0 +1,16 @@
+#wrap {
+  max-width: 992px;
+}
+
+header[role=banner] {
+  padding:rhythm(1) 0;
+}
+
+#logo {
+  float:left;
+  width: 40%;
+  margin:0;
+  line-height:1;
+  padding: 0;
+}
+
