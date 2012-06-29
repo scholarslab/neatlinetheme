@@ -11,9 +11,9 @@ queue_js_string($modernizrLoad);
 
 queue_css('style');
 
-function foobar() {
-  echo 'foo';
-}
+//function foobar() {
+  //echo 'foo';
+//}
 
-add_plugin_hook('public_theme_header', 'foobar');
+//add_plugin_hook('public_theme_header', 'foobar');
 
