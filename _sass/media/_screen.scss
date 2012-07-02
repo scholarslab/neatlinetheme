@@ -188,7 +188,7 @@ header[role=banner] {
       padding: 10px 35px 10px 10px;
       text-align:left;
     }
-      
+
     &[type=submit] {
       width: 35px;
       height: 16px;
@@ -209,13 +209,13 @@ header[role=banner] {
         opacity:1;
       }
     }
-      
+
   }
 }
 
 #sitenav {
   clear:both;
-  margin:0;  
+  margin:0;
   text-align:center;
   text-transform:uppercase;
   letter-spacing: 1px;
@@ -235,7 +235,33 @@ header[role=banner] {
   padding-bottom: 2em;
 
   @include beveled-line;
-}  
+}
+
+
+
+/**
+ * Main Content
+ */
+.neatline {
+
+  #items {
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0.8em 0 0;
+    }
+
+    div.elenent {
+      margin-bottom: 0.5em;
+    }
+
+    a.item-dc-link {
+      display: none;
+    }
+
+  }
+
+}
+
 
 /* Footer
 ----------------------------------------------------------------------------*/
