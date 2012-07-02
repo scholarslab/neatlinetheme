@@ -250,11 +250,15 @@ header[role=banner] {
       margin: 0.8em 0 0;
     }
 
-    div.elenent {
+    div.element {
       margin-bottom: 0.5em;
     }
 
     a.item-dc-link {
+      display: none;
+    }
+
+    div.element-set h2:first-child {
       display: none;
     }
 
