@@ -107,3 +107,21 @@
     border-bottom: 1px solid #fff;
   }
 }
+
+@mixin pagination {
+  ul {
+    padding-left:0;
+    list-style:none;
+    @include adjust-font-size-to(11px);
+
+    li {
+      display:inline;
+      font-style:italic;
+    }
+    
+    a {
+      text-decoration:none;
+    }
+  }
+}
+

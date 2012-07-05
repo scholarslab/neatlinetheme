@@ -20,6 +20,12 @@ $show-grid-backgrounds          : false;
 $base-font-size                 : 16px;
 $base-line-height               : 28px;
 
+// Susy Variables -------------------------------------------------------------
+$total-columns: 8;
+$column-width: 10%;
+$gutter-width: 2%;
+$grid-padding: $gutter-width;
+
 // Colors ---------------------------------------------------------------------
 $dark-grey        : rgba(0,0,0,0.7);
 $light-grey       : rgba(0,0,0,0.5);
@@ -30,6 +36,7 @@ $default-color-light            : rgba($default-color, 0.75);
 $default-color-lighter          : rgba($default-color, 0.5);
 $default-color-lightest         : rgba($default-color, 0.25);
 
+$highlight-color                : rgb(90,60,110);
 $link-color                     : rgb(90,60,110);
 $link-color-light               : lighten($link-color, 10%);
 $link-color-alternate           : rgb(186, 158, 6);

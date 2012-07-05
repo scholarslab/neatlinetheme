@@ -8,17 +8,18 @@
 
 html {
   background: #f9f9f9 url(images/bg_wrapper.jpg);
-  border-top: 10px solid rgba(90,60,110, 1);
+  border-top: rhythm(0.25) solid $highlight-color;
 }
 
 body {
   @include background-image(
-    linear-gradient(rgba(0,0,0,0.1) 0, rgba(0,0,0,0) 10%)
+    linear-gradient(rgba(0,0,0,0.15) 0, rgba(0,0,0,0) 10%)
   );
   background-repeat: no-repeat;
   border-top:2px solid rgba(255,255,255,0.75);
   color: $default-color;
   @include serif;
+  
 }
 
 fieldset {
@@ -97,11 +98,11 @@ a {
 }
 
 #{headings(2,6)} {
-  margin-top: rhythm(1);
+  @include leader(1);
 }
 
 figure {
-  margin-bottom: rhythm(1);
+  @include trailer(1);
 }
 
 figcaption {
@@ -142,28 +143,38 @@ button,
   @include clearfix;
 }
 
+.pagination {
+  @include pagination;
+}
+
+#wrap {
+  @include container;
+}
+
 /**
  * Banner Header
  */
 header[role=banner] {
   @include clearfix;
-  padding: rhythm(1) 0 0;
+  text-align:center;
+  @include leader(1);
+}
+
+#site-title {
+  @include adjust-font-size-to(24px);
 }
 
 #search-container {
-  float: right;
-  text-align:right;
   @include adjust-font-size-to(12px);
+  @include trailer(1);
 
   a.advanced-search {
     text-decoration:none;
-
   }
 
 }
 
 #simple-search {
-  min-width: 250px;
   position: relative;
   
   input {
@@ -222,22 +233,20 @@ header[role=banner] {
   @include adjust-font-size-to(12px);
   @include adjust-leading-to(2);
   @include beveled-line;
+  @include beveled-line('after');  
   @include horizontal-nav;
 }
 
 /**
  * Main Content
  */
-#content {
+div[role=main] {
   clear:both;
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 2em;
-
-  @include beveled-line;
 }
 
-
+.items-nav {
+  display:none;
+}
 
 /**
  * Main Content
@@ -273,13 +282,22 @@ footer[role="contentinfo"] {
   clear:both;
   @include sans-serif;
   @include beveled-line;
-  &:before {
-    margin-bottom: rhythm(1);
+  @include trailer(1);
+  
+  #footer-text {
+    @include adjust-font-size-to(12px);
+    @include adjust-leading-to(1);
+    color: $default-color-light;
   }
-  @include adjust-font-size-to(12px);
 
-  nav {
+  nav {  
     @include horizontal-nav;
+    @include adjust-font-size-to(12px);
+    @include adjust-leading-to(1);
+
+    ul {
+      @include leader(0.5);
+    }
   }
 }
 

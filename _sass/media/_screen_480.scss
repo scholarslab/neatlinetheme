@@ -1,8 +1,24 @@
-$total-cols: 8;
-$col-width: 10%;
-$gutter-width: 2%;
-$side-gutter-width: 0;
-
-#wrap {
-  @include container;
+header[role=banner] {
+  text-align:left;
 }
+
+#site-title {
+  @include span-columns(4);
+  margin:0;
+}
+
+#search-container {
+  text-align:right;
+  margin:0;
+  @include span-columns(4 omega);
+
+  input[type=text] {
+    max-width: 200px;
+  }
+}
+
+#sitenav {
+  clear:both;
+  @include padding-leader(1);
+}
+

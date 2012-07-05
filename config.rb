@@ -1,4 +1,4 @@
-require 'susy' #Susy framework
+require "susy"
 
 http_path = "/"
 css_dir = "css"

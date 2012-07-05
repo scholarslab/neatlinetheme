@@ -2,15 +2,23 @@
   max-width: 992px;
 }
 
-header[role=banner] {
-  padding:rhythm(1) 0;
+header[role="banner"] {
+  @include clearfix;
+  text-align:left;
 }
 
-#logo {
-  float:left;
-  width: 40%;
-  margin:0;
-  line-height:1;
-  padding: 0;
+#sitenav {
+  clear:both;
 }
 
+footer[role=contentinfo] {
+  padding:0;
+
+  nav {
+    @include span-columns(4, 8);
+  }
+
+  #footer-text {
+    @include span-columns(4 omega, 8);
+  }
+}
