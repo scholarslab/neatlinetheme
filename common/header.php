@@ -39,12 +39,12 @@
 
     <div id="search-container">
     <?php echo simple_search(); ?>
-    <?php echo link_to_advanced_search(null, array('class' => 'advanced-search')); ?>
+<?php if (get_theme_option('display_advanced_search_link')) echo link_to_advanced_search(null, array('class' => 'advanced-search')); ?>
     </div>
 
     <nav id="sitenav">
       <ul class="navigation">
-          <?php echo public_nav_main(array(__('Home') => uri(''), __('Browse Items') => uri('items'), __('Browse Neatlines') => uri('neatline-exhibits'))); ?>
+        	<?php echo custom_public_nav_header(); ?>
       </ul>
     </nav>
 
