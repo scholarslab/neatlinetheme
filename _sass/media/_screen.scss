@@ -276,5 +276,10 @@ footer[role="contentinfo"] {
   &:before {
     margin-bottom: rhythm(1);
   }
+  @include adjust-font-size-to(12px);
+
+  nav {
+    @include horizontal-nav;
+  }
 }
 
