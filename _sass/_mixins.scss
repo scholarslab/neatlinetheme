@@ -112,11 +112,31 @@
   ul {
     padding-left:0;
     list-style:none;
-    @include adjust-font-size-to(11px);
+    @include adjust-font-size-to(14px);
 
     li {
       display:inline;
       font-style:italic;
+      padding-right:0.5em;
+
+      &.pagination_first,
+      &.pagination_previous {
+        &:after {
+          content: " · ";
+          color: $default-color-light;
+          padding-left:0.5em;
+        }
+      }
+
+      &.pagination_next,
+      &.pagination_last {
+        &:before {
+          content: " · ";
+          color: $default-color-light;
+          padding-right:0.5em;
+        }
+      }
+
     }
     
     a {
