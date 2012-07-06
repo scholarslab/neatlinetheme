@@ -29,11 +29,11 @@ fieldset {
 }
 
 input {
-  &[type=text] {
+  &[type="text"] {
       border: 0;
       background-color: #fff;
       border: 1px solid rgba(0,0,0,0.1);
-      color: #999;
+      color: #555;
       padding: 5px;
   }
 }
@@ -178,21 +178,6 @@ header[role=banner] {
   position: relative;
   
   input {
-    &:focus {
-      outline: none;
-      background-color: #fff;
-      border: 1px solid rgba(0,0,0,0.2);
-      color: #fbfbfb;
-    }
-
-    &:-moz-placeholder {
-      font-style: italic;
-    }
-
-    &::-webkit-input-placeholder  {
-      font-style: italic;
-      color: rgba(255,255,255,.3);
-    }
     
     &[type=text] {
       width: 100%;
