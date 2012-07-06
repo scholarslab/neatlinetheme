@@ -1,4 +1,5 @@
-header[role=banner] {
+header[role="banner"] {
+  @include clearfix;
   text-align:left;
 }
 
@@ -22,3 +23,14 @@ header[role=banner] {
   @include padding-leader(1);
 }
 
+footer[role=contentinfo] {
+  padding:0;
+
+  nav {
+    @include span-columns(4, 8);
+  }
+
+  #footer-text {
+    @include span-columns(4 omega, 8);
+  }
+}
